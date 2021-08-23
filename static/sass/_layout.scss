@@ -1,0 +1,123 @@
+//! Navbar
+
+.navbar{
+    background: $base-bg-color;
+    box-shadow:  0 0 7px $dark-color;
+    ul{
+        flex-direction: row;
+        li{
+            padding-left: 20px;
+            a{
+                white-space: nowrap;
+                position: relative;
+                color: rgba($color: $white-color, $alpha: .7) !important;
+                &:hover{
+                    color: rgba($color: $white-color, $alpha: .9) !important;
+                    &::before{
+                        opacity: 1;
+                        bottom: 0;
+                    }
+                }
+                @media only screen and (min-width: 567px) {
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -20px;
+                        opacity: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: $white-color;
+                        border-radius: 4px;
+                        box-shadow: 0 0 20px $black-color;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//! Details
+
+.details{
+    .btn-purple{  
+        font-size: x-large;
+        border-radius: 5px;
+        padding: 15px 50px;
+    }
+    @media only screen and (min-width: 992px) {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+//! Fast shortener
+
+.fast-shortener{
+    background: #350061;
+    .form{
+        .col-md-7{
+            overflow: hidden;
+        }
+        .url-input-container{
+            @include input-container;
+            left: 0;
+        }
+        .password-input-container{
+            @include input-container;
+            top: -60px;
+            right: -400%;
+        }
+        input{
+            width: 100%;
+            height: 60px;
+            box-shadow:  0 0 7px $dark-color inset;
+            font-size: 1.25rem;
+            border: 0;
+            outline: 0;
+        }
+        .next-btn, .previous-btn{
+            width: 70px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            background: $base-color;
+        }
+        .btn-purple{
+            background: $base-color;
+            color: $white-color;
+            font-size: x-large;
+            border-radius: 5px;
+            width: 100%;
+            height: 60px;
+            transition: .2s;
+            &:hover{
+                background: $base-bg-color;
+                color: $white-color;
+            }
+        }
+        p{
+            color: $secondary-color;
+            a{
+                color: $secondary-color;
+                text-decoration: underline;
+                &:hover{
+                    color: $base-color;
+                }
+            }
+        }
+        .alert{
+            animation: fadein 1s;
+            &-secondary{
+                p{
+                    width: 90%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}

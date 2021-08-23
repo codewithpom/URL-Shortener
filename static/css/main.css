@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+button, input, textarea {
+  border: 0;
+  outline: 0;
+}
+
+.btn-purple {
+  background: #8c00ff;
+  color: #fff;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.btn-purple:hover {
+  background: #7500d4;
+  color: #fff;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar {
+  background: #7500d4;
+  -webkit-box-shadow: 0 0 7px #333;
+          box-shadow: 0 0 7px #333;
+}
+
+.navbar ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navbar ul li {
+  padding-left: 20px;
+}
+
+.navbar ul li a {
+  white-space: nowrap;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.navbar ul li a:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar ul li a:hover::before {
+  opacity: 1;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 567px) {
+  .navbar ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    opacity: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 20px #000;
+            box-shadow: 0 0 20px #000;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+.details .btn-purple {
+  font-size: x-large;
+  border-radius: 5px;
+  padding: 15px 50px;
+}
+
+@media only screen and (min-width: 992px) {
+  .details {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.fast-shortener {
+  background: #350061;
+}
+
+.fast-shortener .form .col-md-7 {
+  overflow: hidden;
+}
+
+.fast-shortener .form .url-input-container {
+  position: relative;
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  left: 0;
+}
+
+.fast-shortener .form .password-input-container {
+  position: relative;
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+  top: -60px;
+  right: -400%;
+}
+
+.fast-shortener .form input {
+  width: 100%;
+  height: 60px;
+  -webkit-box-shadow: 0 0 7px #333 inset;
+          box-shadow: 0 0 7px #333 inset;
+  font-size: 1.25rem;
+  border: 0;
+  outline: 0;
+}
+
+.fast-shortener .form .next-btn, .fast-shortener .form .previous-btn {
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  background: #8c00ff;
+}
+
+.fast-shortener .form .btn-purple {
+  background: #8c00ff;
+  color: #fff;
+  font-size: x-large;
+  border-radius: 5px;
+  width: 100%;
+  height: 60px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.fast-shortener .form .btn-purple:hover {
+  background: #7500d4;
+  color: #fff;
+}
+
+.fast-shortener .form p {
+  color: #999;
+}
+
+.fast-shortener .form p a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.fast-shortener .form p a:hover {
+  color: #8c00ff;
+}
+
+.fast-shortener .form .alert {
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+.fast-shortener .form .alert-secondary p {
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!--! Custom Styles-->
+    <link rel="stylesheet" href="../static/css/contact.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="frm">
+            <p>Get in Touch</p>
+            <form action="contact/" method="post">
+                <div class="alert alert-danger">
+
+                </div>
+                <div class="form-group">
+                    <label for="#name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="#email">E-mail</label>
+                    <input type="text" id="email" placeholder="Your E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="#message">Message</label>
+                    <textarea type="text" id="message" placeholder="Your Message"></textarea>
+                </div>
+                <div class="form-group captcha">
+                    <label for="#message">ReCaptcha</label>
+                    <canvas></canvas>
+                    <button type="button">
+                        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill-rule="evenodd" clip-rule="evenodd" fill="#555"><path d="M13.041 19.624a7 7 0 0 0 4.95-8.574 1 1 0 0 1 1.932-.517A9 9 0 0 1 6.705 20.642a1 1 0 0 1 1.005-1.729 6.975 6.975 0 0 0 5.331.71z"/><path d="M16.235 13.607a1 1 0 0 1-.024-1.414l2.027-2.096a1 1 0 0 1 1.414-.024l2.096 2.026a1 1 0 1 1-1.39 1.438l-1.377-1.331-1.332 1.377a1 1 0 0 1-1.414.024zM10.554 5.196a7 7 0 0 0-4.95 8.573 1 1 0 1 1-1.932.518A9 9 0 0 1 16.89 4.177a1 1 0 1 1-1.005 1.73 6.975 6.975 0 0 0-5.331-.711z"/><path d="M7.36 11.213a1 1 0 0 1 .024 1.414l-2.027 2.096a1 1 0 0 1-1.414.024L1.847 12.72a1 1 0 1 1 1.39-1.438l1.378 1.332 1.331-1.377a1 1 0 0 1 1.414-.024z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                    </button>
+                    <input type="text" placeholder="Enter sum of numbers">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!--! Scripts-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="../static/js/contact.js"></script>
+</body>
+</html>

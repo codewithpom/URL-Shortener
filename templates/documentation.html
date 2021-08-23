@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    
+    <!--! Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--! Highlight-->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/google-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!--! Custom Styles-->
+    <link rel="stylesheet" href="../static/css/documentation.css">
+</head>
+<body>
+
+    <!--! Navbar-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <nav class="navbar navbar-expand-sm navbar-dark py-md-3 fixed-top">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse d-none d-sm-static">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Why this?</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Solution</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                      </ul>
+                    </div>
+            
+                    <div class="my-2 my-lg-0">
+                        <a href="contact.html" class="btn btn-outline-light my-2 my-sm-0 contact-btn">Contact us</a>
+                    </div>
+            
+                    <div class="collapse navbar-collapse navbar-collapse-sm d-sm-none" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto d-flex justify-content-between">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Why this?</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Solution</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Feature</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Resources</a>
+                          </li>
+                        </ul>
+                      </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--! Content-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--! Navside-->
+            <div class="col-12 col-md-3 col-lg-2 navside bg-white border-right  pt-5 mt-5 navbar-light">
+                <ul class="nav flex-md-column pt-4">
+                    <li class="nav-item w-100 d-flex justify-content-between align-items-center border-bottom pb-3">
+                        <p class="h5 text-secondary">URL Shortener Docs</p>
+                        <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navside" aria-controls="navside" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </li>
+                    <div class="collapse navbar-collapse navbar-collapse-sm d-md-block mt-4" id="navside">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#intro">Introduction</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#get-started">Get started</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#how-to-use">How to use</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#api">API</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#about">About</a>
+                          </li>
+                    </div>
+                  </ul>
+            </div>
+
+            <!--! Intro-->
+            <div class="col-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2 mt-md-5 p-md-5">
+                <div id="intro">
+                    <div class="title font-weight-light">
+                        <p class="display-4">Introduction</p>
+                        <p class="h4 font-weight-light">Get started with URL Shortener, A URL shortener that builded with powerful tools to help you know who used your link, Even there's an API that you can use in your project.</p>
+                    </div>
+                </div>
+                <div id="get-started">
+                  <div class="title font-weight-light mt-5 pt-md-5">
+                      <p class="display-4">Get started</p>
+                      <p class="h4 font-weight-light">Looking to quickly add url shortener to your project? Use our API, provided by free to help you make your project faster!</p>
+                  </div>
+                </div>
+                <div id="how-to-use">
+                  <div class="title font-weight-light mt-5 pt-md-5">
+                      <p class="display-4">How to use</p>
+                      <p class="h4 font-weight-light">To use our API, do the following steps :</p>
+                  </div>
+                  <div class="content mt-5">
+                    <p class="h4">Make a Shortened URL</p>
+                    <p>To make a Shortened URL you just need to put the code below inside your js file:</p>
+                    <pre><code>
+let ajxRqstData = 'url=' + 'Your URL' + '&password='+ 'Your password (optinal)';
+let xhttp;
+
+if (window.XMLHttpRequest){
+    xhttp = new XMLHttpRequest();
+}else{
+    xhttp = new ActiveXObject('Microsoft.XMLHTTP');
+}
+
+xhttp.open('POST', 'make/', true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send(ajxRqstData);
+
+xhttp.addEventListener('readystatechange', function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200){
+        console.log(xhttp.responseText);
+    }
+});
+                    </code></pre>
+                    <p>And if you are using jQuery, you can simply add this to your js file:</p>
+                    <pre><code>
+$.post("make/", {
+  url: 'Your URL', // add the url
+  password: 'Your password'// add password if there is or else do not add it in the request
+},
+function(data){
+  console.log(data);
+});
+                    </code></pre>
+
+                    <p class="h4 mt-5 pt-3">Get logs of a shortened URL</p>
+                    <p>To get logs of a shortened URL, just add this following block of code to your js file:</p>
+                    <pre><code>
+let ajxRqstData = 'url=' + 'Your URL' + '&password='+ 'Your password';
+let xhttp;
+
+if (window.XMLHttpRequest){
+    xhttp = new XMLHttpRequest();
+}else{
+    xhttp = new ActiveXObject('Microsoft.XMLHTTP');
+}
+
+xhttp.open('POST', 'log/', true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send(ajxRqstData);
+
+xhttp.addEventListener('readystatechange', function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200){
+        console.log(xhttp.responseText); // This will return an Object that it has a Array
+    }
+});
+                    </code></pre>
+                    <p>And for jQuery, just do the below:</p>
+                    <pre><code>
+$.post("logs/", {
+  "url" : 'Your URL',
+  "password" : 'Your password'
+  },
+  function(data){
+      console.log(data);
+  }
+);
+                    </code></pre>
+                    <p class="h4 mt-5 pt-3">Read fetched data</p>
+                    <p>Read fetched data is simple, just like the following.</p>
+                    <p class="mt-5">First, it's better to check the loaded data to make sure that data loaded properly:</p>
+                    <p class="text-muted">Tip : In jQuery you can write the code below in done() method to make sure that it runs after that request is done.</p>
+                    <pre><code>
+if (typeof data == 'object'){
+    readData();
+}else{
+    console.log('something went wrong!');
+}
+                    </code></pre>
+                    <p class="mt-5">And here is the readData() function:</p>
+                    <pre>
+                    <code>
+function readData() {
+  for (let x of data[0]){
+      console.log(`
+      Browser : ${x.browser},
+      Date : ${x.date},
+      Platform : ${x.platform},
+      Referrer : ${x.referrer},
+      Time : ${x.time}
+      `);
+  }
+}
+                    </code></pre>
+                    <p>Here your work is done, Just remember that for get number of visitors you need to use `data[0].length`.</p>
+                  </div>
+                  <div id="api">
+                    <div class="title font-weight-light mt-5 pt-md-5">
+                      <p class="display-4">API</p>
+                      <p>As you can see in the above, we have an API that includes all of our features, You'll see new features in the API after each update, So you just need to add a piece of code to your project and boom! you added a full url shortener only with a piece of code, Updates are comming for service and API.</p>
+                    </div>
+                  </div>
+                  <div id="about">
+                    <div class="title font-weight-light mt-5 pt-md-5">
+                      <p class="display-4">About</p>
+                      <p>This website and all features and services, made with
+                        <img src="../static/images/icon/reshot-icon-heart-RGPQ5YDK26.svg" width="24" height="24">
+                        by our team. remember that all features and services are free and you can use our services and API by free, but it's good to read our 
+                        <a href="#">Term of Use</a> and <a href="#">Privacy Policy</a> before using.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! Scripts-->
+
+    <!--* jQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <!--* Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <!--* Custom-->
+    <script src="../static/js/documentation.js"></script>
+    
+</body>
+</html>

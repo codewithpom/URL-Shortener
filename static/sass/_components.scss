@@ -1,0 +1,42 @@
+// ! Elements
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+button, input, textarea{
+    border: 0;
+    outline: 0;
+}
+
+.btn-purple{
+    background: $base-color;
+    color: $white-color;
+    transition: .2s;
+    &:hover{
+        background: $base-bg-color;
+        color: $white-color;
+    }
+}
+
+//! Animations
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//! Mixins
+
+@mixin input-container {
+    position: relative;
+    width: 100%;
+    transition: .4s;
+}

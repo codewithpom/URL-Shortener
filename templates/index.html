@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url Shortener</title>
+
+    <!--! Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!--! Custom CSS-->
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+
+    <!--! Navbar-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <nav class="navbar navbar-expand-sm navbar-dark py-md-3">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse d-none d-sm-static">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Why this?</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Solution</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feature</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                      </ul>
+                    </div>
+            
+                    <div class="my-2 my-lg-0">
+                        <button class="btn btn-outline-light my-2 my-sm-0 contact-btn" type="submit">Contact us</button>
+                    </div>
+            
+                    <div class="collapse navbar-collapse navbar-collapse-sm d-sm-none" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto d-flex justify-content-between">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Why this?</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Solution</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Feature</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Resources</a>
+                          </li>
+                        </ul>
+                      </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <!--! Details-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="details w-100">
+                <div class="col-12 col-lg-6">
+                    <img src="../static/images/detais.svg" alt="">
+                </div>
+                <div class="col-12 col-lg-6 d-flex align-items-center flex-wrap justify-content-center  ">
+                    <div class="text-left">
+                        <p class="h1 font-weight-bold">Shorter Link, Larger Share</p>
+                        <p class="h5 text-secondary mt-3 lead">A URL shortener built with powerful tools to help you know how many people used your link.</p>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-purple mt-5" id="get-started">Get Started For Free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! Fast Shortener-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="fast-shortener w-100 mt-4 mt-lg-0">
+                <div class="col-12">
+                    <form action="" method="post">
+                        <div class="row form mt-4">
+                            <div class="col-12 col-md-7 offset-md-1">
+                                <div class="url-input-container">
+                                    <input type="text" class="rounded p-4" placeholder="Enter your link to make it shortened">
+                                    <button class="next-btn rounded-right text-white" type="button">Next</button>
+                                </div>
+                                <div class="password-input-container">
+                                    <input type="text" class="rounded p-4" placeholder="Enter your password (optional)">
+                                    <button class="previous-btn rounded-right text-white" type="button">Previous</button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 d-flex justify-content-center">
+                                <button class="btn btn-purple" type="submit">Shorten</button>
+                            </div>
+                            <div class="col-12 p-0 mt-3 mt-md-0">
+                                <div class="col-10 col-md-6 alert alert-secondary mx-auto d-none text-center">
+                                    <!--? Link goes here-->
+                                </div>
+                                <div class="col-10 col-md-6 alert alert-danger mx-auto d-none text-center">
+                                    <!--? Error goes here-->
+                                </div>
+                                <p class="text-center">By using this action, you are agreeing to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! Scripts-->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>
