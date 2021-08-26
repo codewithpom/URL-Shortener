@@ -14,7 +14,7 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/", subdomain="api")
+@app.route("/api")
 def api_page():
     return render_template("documentation.html")
 
@@ -75,7 +75,7 @@ def contact():
         name = request.form['name']
         try:
             file = open("problems.csv", 'a')
-            file.write(f'"{name}","{email}","{message}"')
+            file.write(f'"{name}","{email}","{message}"\n')
             file.close()
             return {"Success" : "Added to database"}
 
@@ -85,12 +85,12 @@ def contact():
 
 @app.route("/<code>")
 def show_direction(code):
-    long_url = data.exists(code)
-    if long_url:
-        visits.add_visit(code, request.user_agent.platform, request.user_agent.browser, request.referrer)
-        return redirect(long_url)
-    else:
-        return render_template("404.html"), 404
+        long_url = data.exists(code)
+        if long_url:
+                visits.add_visit(code, request.user_agent.platform, request.user_agent.browser, request.referrer)
+                return redirect(long_url)
+        else:
+                return render_template("404.html"), 404
 
 
-app.run(host="localhost", port=80, debug=True)
+app.run(host="0.0.0.0", port=8080, debug=True)

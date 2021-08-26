@@ -1,6 +1,6 @@
 //! Variable
 
-let scrlSmSiz = 567;
+let scrlSmSiz = 576;
 
 let dElFstShrtnrOfstTp = $('.fast-shortener').offset().top;
 
@@ -29,7 +29,7 @@ function deCpyShrtLnkBtnClck() {
 //! DOM Event Handler
 
 function deNvBrClpsHidHandler(){
-    if($(window).width() >= scrlSmSiz){
+    if((window.innerWidth + 16) >= scrlSmSiz){
         $('.navbar-collapse-sm').attr('style', 'display: none !important;');
     }else{
         $('.navbar-collapse-sm').attr('style', '');
@@ -52,7 +52,7 @@ function deUrlInpMovrToRigt(){
 
 function defstShrtnrSubHandler(){
     event.preventDefault();
-    if (dElFstShrtnrUrlInp.val() === ''){
+    if (dElFstShrtnrUrlInp.val() == ''){
 
         $('.fast-shortener .alert-danger').html('Please enter a URL to make shorten!').addClass('d-block');
 
@@ -61,23 +61,7 @@ function defstShrtnrSubHandler(){
         $('.fast-shortener .alert-danger').html('Please enter a valid URL to make shorten!').addClass('d-block');
 
     }else{
-        $.post("/make", {
-          url: dElFstShrtnrUrlInp.val(), // add the url
-          password: dElFstShrtnrPswrdInp.val()// add password if there is or else do not add it in the request
-        },
-
-        function(data){
-            const url = window.location.href;
-            const arr = url.split("/");
-            const result = arr[0] + "//" + arr[2] + "/"
-            console.log(result)
-            console.log(data)
-            $('.fast-shortener .alert-danger').removeClass('d-block');
-            $('.fast-shortener .alert-secondary').html(`<button type="button" class="btn btn-outline-primary mr-5 copy-btn">Copy</button> \n
-            <p class="mb-0 pt-2"><a href="${result}${data['short']}">${result}${data['short']}</a></p>`).addClass('d-flex');
-
-            deCpyShrtLnkBtnClck(); // To fond element (btn) when it will be added to documnet
-        });
+        sndRqstToShrtnr();
     }
 }
 
@@ -90,6 +74,25 @@ function deCpyShrtLnkBtnClckHandler() {
 }
 
 //! Aditinal Functions
+
+function  sndRqstToShrtnr() {
+    $.post("/make", {
+        url: dElFstShrtnrUrlInp.val(), // add the url
+        password: dElFstShrtnrPswrdInp.val()// add password if there is or else do not add it in the request
+      },
+      function(data){
+          let html = `<button type="button" class="btn btn-outline-primary mr-5 copy-btn">Copy</button>
+          <p class="mb-0 pt-2"><a href="${data}">${data}</a></p>`;
+
+          $('.fast-shortener .alert-danger').removeClass('d-block');
+          $('.fast-shortener .alert-secondary').html(html).addClass('d-flex');
+
+          CpyShrtLnkBtnClck(); // To find element (btn) when it will be added to documnet
+      })
+      .fail(function(x) {
+        $('.fast-shortener .alert-danger').html(`Somethin went wrong! Error : ${x}`).addClass('d-block');
+      });
+}
 
 function copyToClipboard(str) {
     let el = document.createElement('textarea');

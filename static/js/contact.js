@@ -14,6 +14,8 @@ let dElFrmCptInp = $('form .captcha input');
 
 let dElFrmAlrt = $('form .alert-danger');
 
+let dElFrmAlrtSccss = $('form .alert-success');
+
 let dElFrmCptBtn = $('form .captcha button');
 
 let emlRgx = /[0-9a-zA-Z]+\@+[a-z]+\.+['com']/;
@@ -34,7 +36,7 @@ function deFrmSbmtHandler(){
     let x = Symbol.keyFor(cptCdX); //* Read data from Symbol
     let y = Symbol.keyFor(cptCdY); //* Read data from Symbol
 
-    if (dElFrmNmInp.val() === '' || dElFrmEmlInp.val() === '' || dElFrmMsgInp.val() === ''){
+    if (dElFrmNmInp.val() == '' || dElFrmEmlInp.val() == '' || dElFrmMsgInp.val() == ''){
         //? If any input is empty
         dElFrmAlrt.html('Error : Please fill out the field below!').css('display', 'block');
     }else if (!emlRgx.test(dElFrmEmlInp.val())){
@@ -89,6 +91,7 @@ function sndRqstToSrvr(){
     },
     function (data){
         console.log(data);
+        dElFrmAlrtSccss.html('Form sent successfully!').css('display', 'block');
     }
     );
 }

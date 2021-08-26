@@ -20,6 +20,13 @@
     border-color: #f5c6cb;
 }
 
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+
 .container{
     width: 100%;
     min-height: 100vh;
@@ -44,7 +51,7 @@
     text-align: center;
 }
 
-.container .frm form .alert-danger{
+.container .frm form .alert{
     display: none;
     margin-top: 1rem;
 }
